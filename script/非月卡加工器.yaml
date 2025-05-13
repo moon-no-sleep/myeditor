@@ -1,0 +1,311 @@
+!!python/tuple
+- step: 点击
+  type: mouse
+  input: click
+  point: &id001 !!python/tuple
+  - 960
+  - 512
+- step: 延迟
+  type: sleep
+  time: 1
+- &id002
+  step: 复位
+  type: mouse
+  input: click
+  point: *id001
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 弹窗取消
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 405
+  - 355
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 去发射器处
+  type: key
+  input: D
+  delay: 900
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 微调位置
+  type: key
+  input: W
+  delay: 200
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 激活发射器
+  type: key
+  input: Q
+  delay: null
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 拉动视角1
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 504
+  - 280
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角2
+  type: mouse
+  input: down
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角3
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 370
+  - 247
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角4
+  type: mouse
+  input: up
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 发射
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 880
+  - 450
+- step: 延迟
+  type: sleep
+  time: 3
+- step: 走进小屋
+  type: key
+  input: A
+  delay: 1500
+- step: 延迟
+  type: sleep
+  time: 8
+- *id002
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 向北走
+  type: key
+  input: W
+  delay: 200
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 东拐到底
+  type: key
+  input: D
+  delay: 2000
+- &id003
+  step: 大功能键
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 850
+  - 449
+- &id005
+  step: 延迟
+  type: sleep
+  time: 2
+- &id004
+  step: 左侧复位
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 100
+  - 470
+- &id006
+  step: 延迟
+  type: sleep
+  time: 1
+- *id003
+- &id007
+  step: 延迟
+  type: sleep
+  time: 2
+- *id004
+- &id008
+  step: 延迟
+  type: sleep
+  time: 0.5
+- &id009
+  step: 向北走
+  type: key
+  input: W
+  delay: 280
+- &id010
+  step: 延迟
+  type: sleep
+  time: 1
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id009
+- *id010
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id009
+- *id010
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id009
+- *id010
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id009
+- *id010
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id002
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 向北走
+  type: key
+  input: W
+  delay: 200
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 东拐到底
+  type: key
+  input: D
+  delay: 2000
+- step: 延迟
+  type: sleep
+  time: 1
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- &id011
+  step: 向北走2
+  type: key
+  input: W
+  delay: 285
+- &id012
+  step: 延迟
+  type: sleep
+  time: 1
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id011
+- *id012
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id011
+- *id012
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id011
+- *id012
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id011
+- *id012
+- *id003
+- *id005
+- *id004
+- *id006
+- *id003
+- *id007
+- *id004
+- *id008
+- *id002
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 走出小屋
+  type: key
+  input: S
+  delay: 1200
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 确认不捡物品
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 609
+  - 353
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 走出小屋
+  type: key
+  input: S
+  delay: 1200
+- step: 延迟
+  type: sleep
+  time: 8
+- *id002
