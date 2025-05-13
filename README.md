@@ -8,8 +8,10 @@
 
    本文件生成的脚本文件用于'农场AI助手'的版本号>"1.7.0"
 
-   Python3.13
-   PyYAML
+      Python3.13
+      
+      PyYAML
+
 3. ##### 文件说明:
 
    action_define: 该文件夹包含定义各脚本的数据.

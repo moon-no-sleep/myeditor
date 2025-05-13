@@ -87,6 +87,13 @@ from action_define.action_base import *
     },
     大功能键,
     step_sleep(4),
+    {
+        "step": "往回走",
+        "type": "key",
+        "input": "S",
+        "delay": 400,
+    },
+    step_sleep(1),
 )
 泡温泉 = (*温泉, 大功能键, step_sleep(17), 复位鼠标, step_sleep(1))
 
