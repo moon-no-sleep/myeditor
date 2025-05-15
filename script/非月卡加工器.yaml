@@ -98,10 +98,10 @@
 - step: 延迟
   type: sleep
   time: 1
-- step: 向北走
+- step: 向北走点
   type: key
   input: W
-  delay: 200
+  delay: 220
 - step: 延迟
   type: sleep
   time: 0.5

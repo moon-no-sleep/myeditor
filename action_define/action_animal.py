@@ -29,12 +29,10 @@ from action_define.action_base import *
     step_sleep(0.5),
 )
 下一块地 = (
-    {
-        "step": "走到下一块地",
-        "type": "key",
-        "input": "D",
-        "delay": 720,
-    },
+    D键按下,
+    跳跃键,
+    step_sleep(0.72),
+    D键松开,
     step_sleep(1),
     *种菜2连,
 )

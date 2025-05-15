@@ -48,6 +48,9 @@
 - step: 延迟
   type: sleep
   time: 1
+- step: 延迟
+  type: sleep
+  time: 2
 - &id002
   step: 左侧复位
   type: mouse
@@ -55,5 +58,11 @@
   point: !!python/tuple
   - 100
   - 470
+- step: 延迟
+  type: sleep
+  time: 2
 - *id002
+- step: 延迟
+  type: sleep
+  time: 2
 - *id003

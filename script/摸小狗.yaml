@@ -98,7 +98,7 @@
   time: 1
 - step: 离开狗窝
   type: key
-  input: A
+  input: S
   delay: 1200
 - step: 延迟
   type: sleep

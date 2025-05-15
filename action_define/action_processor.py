@@ -53,10 +53,10 @@ from action_define.action_base import *
     复位鼠标,
     step_sleep(1),
     {
-        "step": "向北走",
+        "step": "向北走点",
         "type": "key",
         "input": "W",
-        "delay": 200,
+        "delay": 220,
     },
     step_sleep(0.5),
     {

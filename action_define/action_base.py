@@ -25,7 +25,7 @@ def step_sleep(t):
     "step": "头像复位",
     "type": "mouse",
     "input": "click",
-    "point": (40, 50),
+    "point": (40, 83),
 }
 
 左侧复位 = {
@@ -75,6 +75,18 @@ A键松开 = {
     "step": "移动到无人机旁",
     "type": "up",
     "input": "A",
+    "delay": None,
+}
+D键按下 = {
+    "step": "移动到无人机旁",
+    "type": "down",
+    "input": "D",
+    "delay": None,
+}
+D键松开 = {
+    "step": "移动到无人机旁",
+    "type": "up",
+    "input": "D",
     "delay": None,
 }
 
