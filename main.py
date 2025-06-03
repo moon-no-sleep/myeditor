@@ -8,6 +8,7 @@ from action_define.action_fishpond import 非月卡鱼塘
 from action_define.action_catch_fish import 炸鱼
 from action_define.action_processor import 非月卡加工器
 from action_define.action_general import *
+from action_define.action_restaurant import 非月卡餐厅
 
 
 actions_tree = {
@@ -25,21 +26,22 @@ actions_tree = {
     "投喂小狗": 投喂小狗,
     "炸鱼": 炸鱼,
     "非月卡加工器": 非月卡加工器,
+    "非月卡餐厅":非月卡餐厅
 }
 
 if __name__ == "__main__":
     current_path = os.path.dirname(os.path.abspath(__file__))
 
     # 全部更新
-    for i in actions_tree:
-        path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
-        with open(path_action_tree, "w", encoding="utf-8") as f:
-            yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
+    # for i in actions_tree:
+    #     path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
+    #     with open(path_action_tree, "w", encoding="utf-8") as f:
+    #         yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
 
     # # 单点更新
-    # i ="非月卡鱼塘"
-    # path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
-    # with open(path_action_tree, "w", encoding="utf-8") as f:
-    #     yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
+    i ="非月卡鱼塘"
+    path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
+    with open(path_action_tree, "w", encoding="utf-8") as f:
+        yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
 
     print("更新完成")

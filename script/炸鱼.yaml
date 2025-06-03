@@ -46,7 +46,7 @@
   - 355
 - step: 延迟
   type: sleep
-  time: 8
+  time: 12
 - step: 点击
   type: mouse
   input: click

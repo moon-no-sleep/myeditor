@@ -57,55 +57,45 @@
   step: 延迟
   type: sleep
   time: 1
-- &id029
-  step: 拉动视角1
+- step: 拉动视角1
   type: mouse
   input: move
   point: &id027 !!python/tuple
   - 504
   - 280
-- &id030
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id031
-  step: 拉动视角2
+- step: 拉动视角2
   type: mouse
   input: down
   point: null
-- &id032
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id033
-  step: 拉动视角3
+- step: 拉动视角3
   type: mouse
   input: move
   point: !!python/tuple
   - 612
   - 285
-- &id034
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id035
-  step: 拉动视角4
+- step: 拉动视角4
   type: mouse
   input: up
   point: null
-- &id036
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id037
-  step: 发射
+- step: 发射
   type: mouse
   input: click
   point: &id028 !!python/tuple
   - 880
   - 450
-- &id038
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 2.5
 - &id002
@@ -202,51 +192,41 @@
 - *id024
 - *id025
 - *id026
-- &id039
-  step: 拉动视角1
+- step: 拉动视角1
   type: mouse
   input: move
   point: *id027
-- &id040
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id041
-  step: 拉动视角2
+- step: 拉动视角2
   type: mouse
   input: down
   point: null
-- &id042
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id043
-  step: 拉动视角3
+- step: 拉动视角3
   type: mouse
   input: move
   point: !!python/tuple
   - 605
   - 300
-- &id044
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id045
-  step: 拉动视角4
+- step: 拉动视角4
   type: mouse
   input: up
   point: null
-- &id046
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id047
-  step: 发射
+- step: 发射
   type: mouse
   input: click
   point: *id028
-- &id048
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 2.5
 - *id002
@@ -295,51 +275,41 @@
 - *id024
 - *id025
 - *id026
-- &id049
-  step: 拉动视角1
+- step: 拉动视角1
   type: mouse
   input: move
   point: *id027
-- &id050
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id051
-  step: 拉动视角2
+- step: 拉动视角2
   type: mouse
   input: down
   point: null
-- &id052
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id053
-  step: 拉动视角3
+- step: 拉动视角3
   type: mouse
   input: move
   point: !!python/tuple
   - 604
   - 320
-- &id054
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id055
-  step: 拉动视角4
+- step: 拉动视角4
   type: mouse
   input: up
   point: null
-- &id056
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id057
-  step: 发射
+- step: 发射
   type: mouse
   input: click
   point: *id028
-- &id058
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 2.5
 - *id002
@@ -388,51 +358,41 @@
 - *id024
 - *id025
 - *id026
-- &id059
-  step: 拉动视角1
+- step: 拉动视角1
   type: mouse
   input: move
   point: *id027
-- &id060
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id061
-  step: 拉动视角2
+- step: 拉动视角2
   type: mouse
   input: down
   point: null
-- &id062
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id063
-  step: 拉动视角3
+- step: 拉动视角3
   type: mouse
   input: move
   point: !!python/tuple
   - 596
   - 349
-- &id064
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id065
-  step: 拉动视角4
+- step: 拉动视角4
   type: mouse
   input: up
   point: null
-- &id066
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id067
-  step: 发射
+- step: 发射
   type: mouse
   input: click
   point: *id028
-- &id068
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 2.5
 - *id002
@@ -481,333 +441,43 @@
 - *id024
 - *id025
 - *id026
-- &id069
-  step: 拉动视角1
+- step: 拉动视角1
   type: mouse
   input: move
   point: *id027
-- &id070
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id071
-  step: 拉动视角2
+- step: 拉动视角2
   type: mouse
   input: down
   point: null
-- &id072
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id073
-  step: 拉动视角3
+- step: 拉动视角3
   type: mouse
   input: move
   point: !!python/tuple
   - 586
   - 385
-- &id074
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id075
-  step: 拉动视角4
+- step: 拉动视角4
   type: mouse
   input: up
   point: null
-- &id076
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 0.5
-- &id077
-  step: 发射
+- step: 发射
   type: mouse
   input: click
   point: *id028
-- &id078
-  step: 延迟
+- step: 延迟
   type: sleep
   time: 2.5
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id015
-- *id016
-- *id017
-- *id018
-- *id019
-- *id020
-- *id021
-- *id022
-- *id023
-- *id024
-- *id025
-- *id026
-- *id029
-- *id030
-- *id031
-- *id032
-- *id033
-- *id034
-- *id035
-- *id036
-- *id037
-- *id038
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id015
-- *id016
-- *id017
-- *id018
-- *id019
-- *id020
-- *id021
-- *id022
-- *id023
-- *id024
-- *id025
-- *id026
-- *id039
-- *id040
-- *id041
-- *id042
-- *id043
-- *id044
-- *id045
-- *id046
-- *id047
-- *id048
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id015
-- *id016
-- *id017
-- *id018
-- *id019
-- *id020
-- *id021
-- *id022
-- *id023
-- *id024
-- *id025
-- *id026
-- *id049
-- *id050
-- *id051
-- *id052
-- *id053
-- *id054
-- *id055
-- *id056
-- *id057
-- *id058
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id015
-- *id016
-- *id017
-- *id018
-- *id019
-- *id020
-- *id021
-- *id022
-- *id023
-- *id024
-- *id025
-- *id026
-- *id059
-- *id060
-- *id061
-- *id062
-- *id063
-- *id064
-- *id065
-- *id066
-- *id067
-- *id068
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id002
-- *id004
-- *id005
-- *id006
-- *id002
-- *id007
-- *id008
-- *id009
-- *id015
-- *id016
-- *id017
-- *id018
-- *id019
-- *id020
-- *id021
-- *id022
-- *id023
-- *id024
-- *id025
-- *id026
-- *id069
-- *id070
-- *id071
-- *id072
-- *id073
-- *id074
-- *id075
-- *id076
-- *id077
-- *id078
 - *id002
 - *id004
 - *id005
