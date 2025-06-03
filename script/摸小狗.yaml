@@ -99,10 +99,17 @@
 - step: 离开狗窝
   type: key
   input: S
-  delay: 1200
+  delay: 1000
 - step: 延迟
   type: sleep
-  time: 10
+  time: 1
+- step: 离开狗窝
+  type: key
+  input: A
+  delay: 1000
+- step: 延迟
+  type: sleep
+  time: 9
 - step: Q按键
   type: key
   input: Q
@@ -118,7 +125,7 @@
   - 233
 - step: 延迟
   type: sleep
-  time: 5
+  time: 6
 - *id002
 - step: 延迟
   type: sleep

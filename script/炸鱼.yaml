@@ -4,7 +4,7 @@
   input: click
   point: !!python/tuple
   - 965
-  - 206
+  - 169
 - step: 延迟
   type: sleep
   time: 1
@@ -33,7 +33,7 @@
   input: click
   point: !!python/tuple
   - 967
-  - 210
+  - 174
 - step: 延迟
   type: sleep
   time: 0.5
@@ -155,17 +155,17 @@
   input: click
   point: !!python/tuple
   - 909
-  - 69
+  - 30
 - step: 延迟
   type: sleep
-  time: 8
+  time: 12
 - &id004
   step: 头像复位
   type: mouse
   input: click
   point: !!python/tuple
   - 40
-  - 83
+  - 50
 - step: 延迟
   type: sleep
   time: 1

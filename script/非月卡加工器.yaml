@@ -93,7 +93,7 @@
   delay: 1500
 - step: 延迟
   type: sleep
-  time: 8
+  time: 10
 - *id002
 - step: 延迟
   type: sleep
@@ -307,5 +307,5 @@
   delay: 1200
 - step: 延迟
   type: sleep
-  time: 8
+  time: 10
 - *id002

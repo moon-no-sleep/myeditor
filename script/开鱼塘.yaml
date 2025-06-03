@@ -66,7 +66,7 @@
   input: click
   point: !!python/tuple
   - 128
-  - 335
+  - 300
 - step: 延迟
   type: sleep
   time: 1
@@ -82,7 +82,7 @@
   input: click
   point: !!python/tuple
   - 128
-  - 363
+  - 328
 - step: 延迟
   type: sleep
   time: 1

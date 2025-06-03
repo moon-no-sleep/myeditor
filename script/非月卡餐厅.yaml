@@ -49,7 +49,7 @@
 - step: 拉动视角1
   type: mouse
   input: move
-  point: !!python/tuple
+  point: &id006 !!python/tuple
   - 504
   - 280
 - step: 延迟
@@ -119,15 +119,31 @@
   delay: null
 - step: 延迟
   type: sleep
-  time: 3
+  time: 1
 - *id004
 - step: 延迟
   type: sleep
-  time: 3
+  time: 4
 - *id004
 - step: 延迟
   type: sleep
-  time: 3
+  time: 1
+- *id004
+- step: 延迟
+  type: sleep
+  time: 4
+- *id004
+- step: 延迟
+  type: sleep
+  time: 1
+- *id004
+- step: 延迟
+  type: sleep
+  time: 4
+- *id004
+- step: 延迟
+  type: sleep
+  time: 1
 - *id004
 - step: 延迟
   type: sleep
@@ -145,7 +161,7 @@
 - step: 延迟
   type: sleep
   time: 1
-- &id006
+- &id007
   step: 左侧复位
   type: mouse
   input: click
@@ -200,20 +216,76 @@
 - step: 延迟
   type: sleep
   time: 1
-- step: 往东走
-  type: key
-  input: D
-  delay: 2500
+- step: 拉动视角1
+  type: mouse
+  input: move
+  point: *id006
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角2
+  type: mouse
+  input: down
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角3
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 627
+  - 268
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角4
+  type: mouse
+  input: up
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角1
+  type: mouse
+  input: move
+  point: *id006
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角2
+  type: mouse
+  input: down
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角3
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 627
+  - 268
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角4
+  type: mouse
+  input: up
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
 - step: 延迟
   type: sleep
   time: 1
-- step: 往北走
+- step: 往前走
   type: key
   input: W
-  delay: 2000
+  delay: 3000
 - step: 延迟
   type: sleep
-  time: 1
+  time: 3
 - *id002
 - step: 延迟
   type: sleep
@@ -236,11 +308,14 @@
 - step: 延迟
   type: sleep
   time: 1
-- *id006
+- *id007
 - step: 延迟
   type: sleep
   time: 2
 - *id003
+- step: 延迟
+  type: sleep
+  time: 1
 - step: 往南走
   type: key
   input: S

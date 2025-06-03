@@ -1,12 +1,14 @@
 from action_define.action_base import *
 
 餐厅初始位置 = MyView(a=(204, 248))
+# 餐厅拉视角1 = MyView(a=(265, 284))
 
 进入餐厅 = (
     *发射器,
     *餐厅初始位置,
     大功能键,
     step_sleep(3.5),
+    # *餐厅拉视角1,
     {
         "step": "进入餐厅",
         "type": "key",
@@ -35,11 +37,19 @@ from action_define.action_base import *
     },
     step_sleep(1),
     Q键位置,
-    step_sleep(3),
+    step_sleep(1),
     Q键位置,
-    step_sleep(3),
+    step_sleep(4),
     Q键位置,
-    step_sleep(3),
+    step_sleep(1),
+    Q键位置,
+    step_sleep(4),
+    Q键位置,
+    step_sleep(1),
+    Q键位置,
+    step_sleep(4),
+    Q键位置,
+    step_sleep(1),
     Q键位置,
     step_sleep(3),
 )
@@ -55,6 +65,11 @@ from action_define.action_base import *
     step_sleep(1),
     左侧复位,
     step_sleep(1),
+)
+
+拉视角 = (
+    *MyView(a=(627, 268)),
+    *MyView(a=(627, 268)),
 )
 补充食材 = (
     复位鼠标,
@@ -84,20 +99,15 @@ from action_define.action_base import *
         "delay": None,
     },
     step_sleep(1),
-    {
-        "step": "往东走",
-        "type": "key",
-        "input": "D",
-        "delay": 2500,
-    },
+    *拉视角,
     step_sleep(1),
     {
-        "step": "往北走",
+        "step": "往前走",
         "type": "key",
         "input": "W",
-        "delay": 2000,
+        "delay": 3000,
     },
-    step_sleep(1),
+    step_sleep(3),
     大功能键,
     step_sleep(1),
     {
@@ -114,6 +124,7 @@ from action_define.action_base import *
 )
 离开餐厅 = (
     复位鼠标,
+    step_sleep(1),
     {
         "step": "往南走",
         "type": "key",
@@ -123,5 +134,5 @@ from action_define.action_base import *
     step_sleep(10),
     复位鼠标,
 )
-非月卡餐厅 = (*进入餐厅, *招待顾客, *预约顾客, *补充食材, *离开餐厅)
+非月卡餐厅 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
 

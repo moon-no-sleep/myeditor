@@ -91,7 +91,7 @@
 - *id002
 - step: 延迟
   type: sleep
-  time: 3
+  time: 3.5
 - *id003
 - step: 延迟
   type: sleep
