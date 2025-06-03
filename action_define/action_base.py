@@ -25,7 +25,7 @@ def step_sleep(t):
     "step": "头像复位",
     "type": "mouse",
     "input": "click",
-    "point": (40, 83),
+    "point": (40, 50),
 }
 
 左侧复位 = {
@@ -48,7 +48,7 @@ E键位置 = {
     "step": "E键位置",
     "type": "mouse",
     "input": "click",
-    "point": (867, 318),  # E键位置
+    "point": (867, 318),  
 }
 
 Q键位置 = {
