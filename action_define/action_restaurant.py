@@ -51,6 +51,14 @@ from action_define.action_base import *
     Q键位置,
     step_sleep(1),
     Q键位置,
+    step_sleep(4),
+    Q键位置,
+    step_sleep(1),
+    Q键位置,
+    step_sleep(4),
+    Q键位置,
+    step_sleep(1),
+    Q键位置,
     step_sleep(3),
 )
 预约顾客 = (

@@ -33,15 +33,15 @@ if __name__ == "__main__":
     current_path = os.path.dirname(os.path.abspath(__file__))
 
     # 全部更新
-    for i in actions_tree:
-        path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
-        with open(path_action_tree, "w", encoding="utf-8") as f:
-            yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
+    # for i in actions_tree:
+    #     path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
+    #     with open(path_action_tree, "w", encoding="utf-8") as f:
+    #         yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
 
     # # 单点更新
-    # i ="非月卡餐厅"
-    # path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
-    # with open(path_action_tree, "w", encoding="utf-8") as f:
-    #     yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
+    i ="非月卡餐厅"
+    path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
+    with open(path_action_tree, "w", encoding="utf-8") as f:
+        yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
 
     print("更新完成")
