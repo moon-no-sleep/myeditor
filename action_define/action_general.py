@@ -192,13 +192,6 @@ from action_define.action_base import *
         "input": "S",
         "delay": 1000,
     },
-    step_sleep(1),
-    {
-        "step": "离开狗窝",
-        "type": "key",
-        "input": "A",
-        "delay": 1000,
-    },
     step_sleep(9),
     {
         "step": "Q按键",

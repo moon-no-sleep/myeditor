@@ -21,7 +21,9 @@ from action_define.action_base import *
 
 招待顾客 = (
     复位鼠标,
+    step_sleep(0.5),
     复位鼠标,
+    step_sleep(1),
     {
         "step": "往南走",
         "type": "key",
@@ -36,30 +38,18 @@ from action_define.action_base import *
         "delay": 300,
     },
     step_sleep(1),
-    Q键位置,
+    *(
+        [
+            Q键位置,
+            step_sleep(0.5),
+            Q键位置,
+            step_sleep(0.5),
+            Q键位置,
+            step_sleep(3),
+        ]
+        * 8  # 重复8pcs
+    ),
     step_sleep(1),
-    Q键位置,
-    step_sleep(4),
-    Q键位置,
-    step_sleep(1),
-    Q键位置,
-    step_sleep(4),
-    Q键位置,
-    step_sleep(1),
-    Q键位置,
-    step_sleep(4),
-    Q键位置,
-    step_sleep(1),
-    Q键位置,
-    step_sleep(4),
-    Q键位置,
-    step_sleep(1),
-    Q键位置,
-    step_sleep(4),
-    Q键位置,
-    step_sleep(1),
-    Q键位置,
-    step_sleep(3),
 )
 预约顾客 = (
     大功能键,
@@ -81,6 +71,7 @@ from action_define.action_base import *
 )
 补充食材 = (
     复位鼠标,
+    step_sleep(1),
     {
         "step": "往北走",
         "type": "down",
@@ -143,4 +134,3 @@ from action_define.action_base import *
     复位鼠标,
 )
 非月卡餐厅 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
-

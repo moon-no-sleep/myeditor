@@ -97,6 +97,9 @@
   type: sleep
   time: 10
 - *id003
+- step: 延迟
+  type: sleep
+  time: 1
 - step: 往北走
   type: down
   input: W
@@ -233,7 +236,7 @@
 - step: 延迟
   type: sleep
   time: 1
-- &id007
+- &id010
   step: 左侧复位
   type: mouse
   input: click
@@ -244,7 +247,13 @@
   type: sleep
   time: 2
 - *id003
+- step: 延迟
+  type: sleep
+  time: 0.5
 - *id003
+- step: 延迟
+  type: sleep
+  time: 1
 - step: 往南走
   type: key
   input: S
@@ -264,53 +273,65 @@
   type: key
   input: Q
   delay: null
-- step: 延迟
+- &id007
+  step: 延迟
   type: sleep
-  time: 1
+  time: 0.5
 - *id006
-- step: 延迟
+- &id008
+  step: 延迟
   type: sleep
-  time: 4
+  time: 0.5
 - *id006
-- step: 延迟
-  type: sleep
-  time: 1
-- *id006
-- step: 延迟
-  type: sleep
-  time: 4
-- *id006
-- step: 延迟
-  type: sleep
-  time: 1
-- *id006
-- step: 延迟
-  type: sleep
-  time: 4
-- *id006
-- step: 延迟
-  type: sleep
-  time: 1
-- *id006
-- step: 延迟
-  type: sleep
-  time: 4
-- *id006
-- step: 延迟
-  type: sleep
-  time: 1
-- *id006
-- step: 延迟
-  type: sleep
-  time: 4
-- *id006
-- step: 延迟
-  type: sleep
-  time: 1
-- *id006
-- step: 延迟
+- &id009
+  step: 延迟
   type: sleep
   time: 3
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- *id006
+- *id007
+- *id006
+- *id008
+- *id006
+- *id009
+- step: 延迟
+  type: sleep
+  time: 1
 - *id002
 - step: 延迟
   type: sleep
@@ -324,7 +345,7 @@
 - step: 延迟
   type: sleep
   time: 1
-- *id007
+- *id010
 - step: 延迟
   type: sleep
   time: 1
