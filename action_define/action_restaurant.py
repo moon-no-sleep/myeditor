@@ -3,6 +3,7 @@ from action_define.action_base import *
 餐厅初始位置 = MyView(a=(204, 248))
 # 餐厅拉视角1 = MyView(a=(265, 284))
 
+# 发射器进入餐厅
 进入餐厅 = (
     *发射器,
     *餐厅初始位置,
@@ -19,7 +20,46 @@ from action_define.action_base import *
     step_sleep(10),
 )
 
+# 步行去餐厅门口
+去餐厅门口v2 = (
+    激活界面,
+    step_sleep(1),
+    复位鼠标,
+    step_sleep(1),
+    弹窗取消,
+    step_sleep(0.5),
+    *mouse_WASD(90),
+    step_sleep(1),
+    鼠标左键松开,
+    *mouse_WASD(165),
+    step_sleep(6),
+    鼠标左键松开,
+    step_sleep(0.5),
+    *mouse_WASD(225),
+    step_sleep(0.4),
+    鼠标左键松开,
+    step_sleep(1),
+)
+
+# 步行进餐厅
+进入餐厅v2 = (
+    *去餐厅门口v2,
+    大功能键,
+    step_sleep(0.5),
+    {
+        "step": "进入餐厅",
+        "type": "key",
+        "input": "A",
+        "delay": 1000,
+    },
+    大功能键,
+    step_sleep(10),
+)
+
+
 招待顾客 = (
+    左侧复位,
+    step_sleep(0.5),
     复位鼠标,
     step_sleep(0.5),
     复位鼠标,
@@ -70,6 +110,8 @@ from action_define.action_base import *
     *MyView(a=(627, 268)),
 )
 补充食材 = (
+    左侧复位,
+    step_sleep(0.5),
     复位鼠标,
     step_sleep(1),
     {
@@ -133,4 +175,5 @@ from action_define.action_base import *
     step_sleep(10),
     复位鼠标,
 )
-非月卡餐厅 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
+# 非月卡餐厅 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
+非月卡餐厅 = (*进入餐厅v2, *补充食材, *招待顾客, *预约顾客, *离开餐厅)

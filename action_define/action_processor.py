@@ -56,7 +56,7 @@ from action_define.action_base import *
         "step": "向北走点",
         "type": "key",
         "input": "W",
-        "delay": 220,
+        "delay": 225,
     },
     step_sleep(0.5),
     {
@@ -74,10 +74,10 @@ from action_define.action_base import *
     复位鼠标,
     step_sleep(1),
     {
-        "step": "向北走",
+        "step": "向北走点",
         "type": "key",
         "input": "W",
-        "delay": 200,
+        "delay": 225,
     },
     step_sleep(0.5),
     {

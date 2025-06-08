@@ -1,3 +1,6 @@
+import math
+
+
 def step_sleep(t):
     # 延迟
     return {
@@ -40,7 +43,7 @@ def step_sleep(t):
     "step": "大功能键",
     "type": "mouse",
     "input": "click",
-    "point": (850, 449), 
+    "point": (850, 449),
 }
 
 
@@ -48,7 +51,7 @@ E键位置 = {
     "step": "E键位置",
     "type": "mouse",
     "input": "click",
-    "point": (867, 318),  
+    "point": (867, 318),
 }
 
 Q键位置 = {
@@ -62,7 +65,7 @@ Q键位置 = {
     "step": "跳跃键",
     "type": "mouse",
     "input": "click",
-    "point": (742, 446),  
+    "point": (742, 446),
 }
 
 A键按下 = {
@@ -103,6 +106,63 @@ D键松开 = {
     "input": "click",
     "point": (605, 360),
 }
+
+鼠标方向键中心坐标 = (177, 382)
+鼠标方向键中心 = (
+    {
+        "step": "鼠标方向键中心点",
+        "type": "mouse",
+        "input": "move",
+        "point": 鼠标方向键中心坐标,
+    },
+    step_sleep(0.5),
+    {
+        "step": "鼠标方向键中心按下",
+        "type": "mouse",
+        "input": "down",
+        "point": None,
+    },
+)
+鼠标左键松开 = {
+    "step": "鼠标左键松开",
+    "type": "mouse",
+    "input": "up",
+    "point": None,
+}
+
+
+def mouse_WASD(theta):
+    """根据鼠标移动角度生成WASD
+
+    Args:
+        theta (int): 角度. 笛卡尔坐标系.
+
+    Returns:
+        tuple: 模拟鼠标点击方向键
+    """
+    center = 鼠标方向键中心坐标
+    radians = math.radians(theta)
+    x = center[0] + math.cos(radians) * 45
+    y = center[1] - math.sin(radians) * 45
+    point = (round(x), round(y))
+    step = (
+        *鼠标方向键中心,
+        step_sleep(0.5),
+        {
+            "step": "鼠标方向键",
+            "type": "mouse",
+            "input": "move",
+            "point": point,
+        },
+    )
+    return step
+
+
+鼠标方向键W = mouse_WASD(90)
+鼠标方向键A = mouse_WASD(180)
+鼠标方向键S = mouse_WASD(270)
+鼠标方向键D = mouse_WASD(0)
+
 
 发射器 = (
     激活界面,
@@ -172,6 +232,7 @@ D键松开 = {
     },
     step_sleep(0.5),
 )
+
 
 def MyView_fine(a=(380, 230), b=(383, 280)):
     # 拉视角1

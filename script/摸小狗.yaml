@@ -8,7 +8,7 @@
 - step: 延迟
   type: sleep
   time: 1
-- &id002
+- &id003
   step: 复位
   type: mouse
   input: click
@@ -119,16 +119,35 @@
 - step: 延迟
   type: sleep
   time: 6
+- &id002
+  step: 头像复位
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 40
+  - 50
+- step: 延迟
+  type: sleep
+  time: 1
 - *id002
 - step: 延迟
   type: sleep
   time: 1
-- step: 左侧复位
+- &id004
+  step: 左侧复位
   type: mouse
   input: click
   point: !!python/tuple
   - 100
   - 470
+- step: 延迟
+  type: sleep
+  time: 0.5
+- *id003
+- step: 延迟
+  type: sleep
+  time: 1
+- *id004
 - step: 延迟
   type: sleep
   time: 1

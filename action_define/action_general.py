@@ -207,6 +207,12 @@ from action_define.action_base import *
         "point": (810, 233),  # E键位置
     },
     step_sleep(6),
+    头像复位,
+    step_sleep(1),
+    头像复位,
+    step_sleep(1),
+    左侧复位,
+    step_sleep(0.5),
     复位鼠标,
     step_sleep(1),
     左侧复位,
