@@ -1,4 +1,5 @@
 import math
+from action_define.config import *
 
 
 def step_sleep(t):
@@ -24,12 +25,7 @@ def step_sleep(t):
     "input": "click",
     "point": (960, 512),
 }
-头像复位 = {
-    "step": "头像复位",
-    "type": "mouse",
-    "input": "click",
-    "point": (40, 50),
-}
+
 
 左侧复位 = {
     "step": "左侧复位",
@@ -106,6 +102,101 @@ D键松开 = {
     "input": "click",
     "point": (605, 360),
 }
+
+# 有摇杆和无摇杆的坐标不同
+头像复位 = {
+    "step": "头像复位",
+    "type": "mouse",
+    "input": "click",
+    "point": (40, 50),
+}
+头像复位_无摇杆 = {
+    "step": "头像复位",
+    "type": "mouse",
+    "input": "click",
+    "point": (40, 83),
+}
+点击社交 = {
+    "step": "点击社交",
+    "type": "mouse",
+    "input": "click",
+    "point": (965, 169),
+}
+
+点击社交_无摇杆 = {
+    "step": "点击社交",
+    "type": "mouse",
+    "input": "click",
+    "point": (965, 206),
+}
+
+点击拜访 = {
+    "step": "拜访",
+    "type": "mouse",
+    "input": "click",
+    "point": (967, 174),
+}
+点击拜访_无摇杆 = {
+    "step": "拜访",
+    "type": "mouse",
+    "input": "click",
+    "point": (967, 210),
+}
+
+点击回家 = {
+    "step": "回家",
+    "type": "mouse",
+    "input": "click",
+    "point": (909, 30),
+}
+
+点击回家_无摇杆 = {
+    "step": "回家",
+    "type": "mouse",
+    "input": "click",
+    "point": (909, 69),
+}
+
+点击普通鱼塘解锁 = {
+    "step": "点击解锁",
+    "type": "mouse",
+    "input": "click",
+    "point": (128, 300),
+}
+
+点击普通鱼塘解锁_无摇杆 = {
+    "step": "点击解锁",
+    "type": "mouse",
+    "input": "click",
+    "point": (128, 349),
+}
+
+点击金彩鱼塘解锁 = {
+    "step": "点击解锁",
+    "type": "mouse",
+    "input": "click",
+    "point": (128, 328),
+}
+
+点击金彩鱼塘解锁_无摇杆 = {
+    "step": "点击解锁",
+    "type": "mouse",
+    "input": "click",
+    "point": (128, 377),
+}
+
+
+if 切换有摇杆_无摇杆:
+    print("无摇杆键位")
+    头像复位 = 头像复位_无摇杆
+    点击社交 = 点击社交_无摇杆
+    点击拜访 = 点击拜访_无摇杆
+    点击回家 = 点击回家_无摇杆
+    点击普通鱼塘解锁 = 点击普通鱼塘解锁_无摇杆
+    点击金彩鱼塘解锁 = 点击金彩鱼塘解锁_无摇杆
+else:
+    print("有摇杆键位")
+
 
 鼠标方向键中心坐标 = (177, 382)
 鼠标方向键中心 = (

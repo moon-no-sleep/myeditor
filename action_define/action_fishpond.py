@@ -1,6 +1,6 @@
 from action_define.action_base import *
 
-钓鱼3连 = (
+钓鱼3连 = [
     大功能键,
     step_sleep(3),
     大功能键,
@@ -14,9 +14,7 @@ from action_define.action_base import *
         "point": (100, 512),  # 点击左侧, 翻页鱼卡
     },
     step_sleep(0.5),
-    Q键位置,
-    step_sleep(0.5),
-)
+]
 
 走到鱼塘边 = (
     *发射器,
@@ -37,28 +35,13 @@ from action_define.action_base import *
 )
 非月卡鱼塘 = (
     *走到鱼塘边,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,    
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,
-    *钓鱼3连,  
-    *钓鱼3连,
-    *钓鱼3连,  
+    *钓鱼3连 * 22,
+    step_sleep(0.5),
+    Q键位置,
+    step_sleep(1),
+    头像复位,
+    step_sleep(1),
+    头像复位,
+    step_sleep(1),
     复位鼠标,
 )
-

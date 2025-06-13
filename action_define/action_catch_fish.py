@@ -2,12 +2,7 @@ from action_define.action_base import *
 from action_define.action_fishpond import 走到鱼塘边
 
 炸鱼前 = (
-    {
-        "step": "点击社交",
-        "type": "mouse",
-        "input": "click",
-        "point": (965, 169),
-    },
+    点击社交,
     step_sleep(1),
     {
         "step": "点击输入栏",
@@ -27,12 +22,7 @@ from action_define.action_fishpond import 走到鱼塘边
         "delay": None,
     },
     step_sleep(0.5),
-    {
-        "step": "拜访",
-        "type": "mouse",
-        "input": "click",
-        "point": (967, 174),
-    },
+    点击拜访,
     step_sleep(0.5),
     弹窗取消,
     step_sleep(12),
@@ -57,12 +47,7 @@ from action_define.action_fishpond import 走到鱼塘边
     step_sleep(2),
     大功能键,
     step_sleep(2),
-    {
-        "step": "回家",
-        "type": "mouse",
-        "input": "click",
-        "point": (909, 30),
-    },
+    点击回家,
     step_sleep(12),
     头像复位,
     step_sleep(1),

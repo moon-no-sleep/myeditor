@@ -1,6 +1,7 @@
 import os
 import yaml
 
+from action_define.config import *
 from action_define.action_base import *
 from action_define.action_farmland_65 import 非月卡菜地
 from action_define.action_animal import 非月卡牧场
@@ -29,6 +30,14 @@ actions_tree = {
     "非月卡餐厅": 非月卡餐厅,
 }
 
+current_path = os.path.dirname(os.path.abspath(__file__))
+if 切换有摇杆_无摇杆:
+    path_folder = os.path.join(current_path, f"script/script_not_wasd")
+    print("无摇杆路径")
+else:
+    path_folder = os.path.join(current_path, f"script")
+    print("有摇杆路径")
+
 
 def write_script(i):
     """写入文件
@@ -36,8 +45,7 @@ def write_script(i):
     Args:
         i (str): 指定文件
     """
-    current_path = os.path.dirname(os.path.abspath(__file__))
-    path_action_tree = os.path.join(current_path, f"script/{i}.yaml")
+    path_action_tree = os.path.join(path_folder, f"{i}.yaml")
     with open(path_action_tree, "w", encoding="utf-8") as f:
         yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
 
@@ -59,7 +67,8 @@ def main_script(x="all"):
 
 
 if __name__ == "__main__":
+    # 请先在config.py中设置有摇杆和无摇杆模式
     main_script("all")  # 更新所有脚本
-    # main_script("非月卡餐厅")  # 单点更新指定脚本
+    # main_script("非月卡鱼塘")  # 单点更新指定脚本
 
     print("更新完成")

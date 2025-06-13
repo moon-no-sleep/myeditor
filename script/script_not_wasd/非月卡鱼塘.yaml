@@ -278,7 +278,7 @@
   input: click
   point: !!python/tuple
   - 40
-  - 50
+  - 83
 - step: 延迟
   type: sleep
   time: 1
