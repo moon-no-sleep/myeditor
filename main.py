@@ -9,7 +9,7 @@ from action_define.action_fishpond import 非月卡鱼塘
 from action_define.action_catch_fish import 炸鱼
 from action_define.action_processor import 非月卡加工器
 from action_define.action_general import *
-from action_define.action_restaurant import 非月卡餐厅
+from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器
 from action_define.action_farmland_less65 import 非月卡菜地小于65级
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
 
@@ -38,6 +38,7 @@ if 切换有摇杆_无摇杆:
 else:
     path_folder = os.path.join(current_path, f"script/script_default")
     print("有摇杆路径")
+
 
 def write_script(i):
     """写入文件
@@ -74,6 +75,7 @@ def custom_script():
         "小红狐菜地": 小红狐菜地,
         "小红狐牧场": 小红狐牧场,
         "小红狐鱼塘": 小红狐鱼塘,
+        "非月卡餐厅biu": 非月卡餐厅_发射器,
     }
     for i in actions_tree:
         path_action_tree = os.path.join(path_folder, f"custom/{i}.yaml")

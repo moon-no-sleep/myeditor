@@ -208,7 +208,7 @@
   step: 走到下一块地
   type: key
   input: W
-  delay: 610
+  delay: 650
 - &id016
   step: 延迟
   type: sleep

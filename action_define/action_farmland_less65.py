@@ -14,7 +14,7 @@ from action_define.action_base import *
         "step": "走到下一块地",
         "type": "key",
         "input": "W",
-        "delay": 610,
+        "delay": 650,
     },
     step_sleep(1),
     *[
