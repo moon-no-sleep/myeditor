@@ -46,7 +46,7 @@
   - 355
 - step: 延迟
   type: sleep
-  time: 12
+  time: 15
 - step: 点击
   type: mouse
   input: click
@@ -111,45 +111,28 @@
   point: !!python/tuple
   - 850
   - 449
-- step: 延迟
+- &id004
+  step: 延迟
   type: sleep
   time: 2
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - *id003
-- step: 延迟
-  type: sleep
-  time: 2
+- *id004
 - step: 回家
   type: mouse
   input: click
@@ -158,8 +141,17 @@
   - 30
 - step: 延迟
   type: sleep
-  time: 12
-- &id004
+  time: 1
+- step: 确认解锁
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 605
+  - 360
+- step: 延迟
+  type: sleep
+  time: 15
+- &id005
   step: 头像复位
   type: mouse
   input: click
@@ -169,7 +161,7 @@
 - step: 延迟
   type: sleep
   time: 1
-- *id004
+- *id005
 - step: 延迟
   type: sleep
   time: 1

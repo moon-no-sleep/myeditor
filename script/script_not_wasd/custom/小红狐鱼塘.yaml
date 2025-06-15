@@ -1,4 +1,4 @@
-炸鱼前: !!python/tuple
+!!python/tuple
 - step: 点击社交
   type: mouse
   input: click
@@ -17,7 +17,10 @@
 - step: 延迟
   type: sleep
   time: 1
-炸鱼中: !!python/tuple
+- step: 键入好友昵称
+  type: insert
+  input: 小红狐
+  delay: null
 - step: 延迟
   type: sleep
   time: 1

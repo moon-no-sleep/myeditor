@@ -103,6 +103,19 @@ D键松开 = {
     "point": (605, 360),
 }
 
+点击输入栏 = {
+    "step": "点击输入栏",
+    "type": "mouse",
+    "input": "click",
+    "point": (694, 537),
+}
+Enter键位 = {
+    "step": "Enter",
+    "type": "key",
+    "input": "Enter",
+    "delay": None,
+}
+
 # 有摇杆和无摇杆的坐标不同
 头像复位 = {
     "step": "头像复位",
@@ -255,7 +268,7 @@ def mouse_WASD(theta):
 鼠标方向键D = mouse_WASD(0)
 
 
-发射器 = (
+去发射器处 = (
     激活界面,
     step_sleep(1),
     复位鼠标,
@@ -276,6 +289,10 @@ def mouse_WASD(theta):
         "delay": 200,
     },
     step_sleep(0.5),
+)
+
+发射器 = (
+    *去发射器处,
     {
         "step": "激活发射器",
         "type": "key",
@@ -286,26 +303,7 @@ def mouse_WASD(theta):
 )
 
 发射器小车 = (
-    激活界面,
-    step_sleep(1),
-    复位鼠标,
-    step_sleep(0.5),
-    弹窗取消,
-    step_sleep(0.5),
-    {
-        "step": "去发射器处",
-        "type": "key",
-        "input": "D",
-        "delay": 900,
-    },
-    step_sleep(0.5),
-    {
-        "step": "微调位置",
-        "type": "key",
-        "input": "W",
-        "delay": 200,
-    },
-    step_sleep(0.5),
+    *去发射器处,
     E键位置,
     step_sleep(0.5),
 )
@@ -323,47 +321,6 @@ def mouse_WASD(theta):
     },
     step_sleep(0.5),
 )
-
-
-def MyView_fine(a=(380, 230), b=(383, 280)):
-    # 拉视角1
-    return (
-        {
-            "step": "拉动视角1",
-            "type": "mouse",
-            "input": "move",
-            "point": (504, 280),
-        },
-        step_sleep(0.5),
-        {
-            "step": "拉动视角2",
-            "type": "mouse",
-            "input": "down",
-            "point": None,
-        },
-        step_sleep(0.5),
-        {
-            "step": "拉动视角3-1",
-            "type": "mouse",
-            "input": "move",
-            "point": (a[0], a[1]),
-        },
-        step_sleep(0.5),
-        {
-            "step": "拉动视角3-2",
-            "type": "mouse",
-            "input": "move",
-            "point": (b[0], b[1]),
-        },
-        step_sleep(0.5),
-        {
-            "step": "拉动视角4",
-            "type": "mouse",
-            "input": "up",
-            "point": None,
-        },
-        step_sleep(0.5),
-    )
 
 
 def MyView(a=(491, 288)):

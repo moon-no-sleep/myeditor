@@ -17,7 +17,7 @@ from action_define.action_base import *
         "delay": 1000,
     },
     大功能键,
-    step_sleep(10),
+    step_sleep(12),
 )
 
 # 步行去餐厅门口
@@ -53,7 +53,7 @@ from action_define.action_base import *
         "delay": 1000,
     },
     大功能键,
-    step_sleep(10),
+    step_sleep(12),
 )
 
 
@@ -170,9 +170,9 @@ from action_define.action_base import *
         "step": "往南走",
         "type": "key",
         "input": "S",
-        "delay": 1200,
+        "delay": 1000,
     },
-    step_sleep(10),
+    step_sleep(12),
     复位鼠标,
 )
 # 非月卡餐厅 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)

@@ -49,7 +49,7 @@ from action_define.action_base import *
         "input": "A",
         "delay": 1500,
     },
-    step_sleep(10),
+    step_sleep(12),
     复位鼠标,
     step_sleep(1),
     {
@@ -115,6 +115,6 @@ from action_define.action_base import *
         "input": "S",
         "delay": 1200,
     },
-    step_sleep(10),
+    step_sleep(12),
     复位鼠标,
 )

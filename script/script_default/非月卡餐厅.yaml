@@ -113,7 +113,7 @@
 - *id006
 - step: 延迟
   type: sleep
-  time: 10
+  time: 12
 - &id010
   step: 左侧复位
   type: mouse
@@ -384,8 +384,8 @@
 - step: 往南走
   type: key
   input: S
-  delay: 1200
+  delay: 1000
 - step: 延迟
   type: sleep
-  time: 10
+  time: 12
 - *id007

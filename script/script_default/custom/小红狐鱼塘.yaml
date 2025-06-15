@@ -1,10 +1,10 @@
-炸鱼前: !!python/tuple
+!!python/tuple
 - step: 点击社交
   type: mouse
   input: click
   point: !!python/tuple
   - 965
-  - 206
+  - 169
 - step: 延迟
   type: sleep
   time: 1
@@ -17,7 +17,10 @@
 - step: 延迟
   type: sleep
   time: 1
-炸鱼中: !!python/tuple
+- step: 键入好友昵称
+  type: insert
+  input: 小红狐
+  delay: null
 - step: 延迟
   type: sleep
   time: 1
@@ -33,7 +36,7 @@
   input: click
   point: !!python/tuple
   - 967
-  - 210
+  - 174
 - step: 延迟
   type: sleep
   time: 0.5
@@ -138,7 +141,7 @@
   input: click
   point: !!python/tuple
   - 909
-  - 69
+  - 30
 - step: 延迟
   type: sleep
   time: 1
@@ -157,7 +160,7 @@
   input: click
   point: !!python/tuple
   - 40
-  - 83
+  - 50
 - step: 延迟
   type: sleep
   time: 1
