@@ -32,6 +32,8 @@ from action_define.action_farmland_less65 import 非月卡菜地小于65级
     step_sleep(1),
     头像复位,
     step_sleep(1),
+    左侧复位,
+    step_sleep(1),
 )
 
 _小红狐牧场 = (*非月卡牧场,)

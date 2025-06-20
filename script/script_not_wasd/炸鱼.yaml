@@ -165,3 +165,12 @@
 - step: 延迟
   type: sleep
   time: 1
+- step: 左侧复位
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 100
+  - 470
+- step: 延迟
+  type: sleep
+  time: 1

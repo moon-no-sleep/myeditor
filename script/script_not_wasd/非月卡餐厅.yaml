@@ -384,8 +384,16 @@
 - step: 往南走
   type: key
   input: S
-  delay: 1000
+  delay: 1500
+- *id006
 - step: 延迟
   type: sleep
   time: 12
+- step: 往南走
+  type: key
+  input: D
+  delay: 800
+- step: 延迟
+  type: sleep
+  time: 1
 - *id007

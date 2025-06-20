@@ -1,5 +1,8 @@
 import math
-from action_define.config import *
+from config.config import *
+
+
+有摇杆 = read_mode()["有摇杆"]
 
 
 def step_sleep(t):
@@ -199,7 +202,7 @@ Enter键位 = {
 }
 
 
-if 切换有摇杆_无摇杆:
+if not 有摇杆:
     print("无摇杆键位")
     头像复位 = 头像复位_无摇杆
     点击社交 = 点击社交_无摇杆

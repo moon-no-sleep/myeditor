@@ -27,6 +27,8 @@ from action_define.action_fishpond import 走到鱼塘边
     step_sleep(1),
     头像复位,
     step_sleep(1),
+    左侧复位,
+    step_sleep(1),
 )
 
 炸鱼 = {"炸鱼前": 炸鱼前, "炸鱼中": 炸鱼中}

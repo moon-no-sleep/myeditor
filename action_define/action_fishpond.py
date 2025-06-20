@@ -43,5 +43,7 @@ from action_define.action_base import *
     step_sleep(1),
     头像复位,
     step_sleep(1),
+    左侧复位,
+    step_sleep(1),
     复位鼠标,
 )

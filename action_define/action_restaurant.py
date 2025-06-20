@@ -14,8 +14,17 @@ from action_define.action_base import *
         "step": "进入餐厅",
         "type": "key",
         "input": "A",
-        "delay": 1000,
+        "delay": 1500,
     },
+    大功能键,
+    step_sleep(0.5),
+    {
+        "step": "进入餐厅",
+        "type": "key",
+        "input": "S",
+        "delay": 200,
+    },
+    step_sleep(1),
     大功能键,
     step_sleep(12),
 )
@@ -170,9 +179,17 @@ from action_define.action_base import *
         "step": "往南走",
         "type": "key",
         "input": "S",
-        "delay": 1000,
+        "delay": 1500,
     },
+    大功能键,
     step_sleep(12),
+    {
+        "step": "往南走",
+        "type": "key",
+        "input": "D",
+        "delay": 800,
+    },
+    step_sleep(1),
     复位鼠标,
 )
 非月卡餐厅_发射器 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)

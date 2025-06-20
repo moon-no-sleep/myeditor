@@ -304,8 +304,13 @@
 - step: 走出小屋
   type: key
   input: S
-  delay: 1200
+  delay: 1500
+- *id003
 - step: 延迟
   type: sleep
   time: 12
+- step: 走出小屋
+  type: key
+  input: S
+  delay: 200
 - *id002
