@@ -3,14 +3,15 @@ import yaml
 
 from config.config import *
 from action_define.action_base import *
-from action_define.action_farmland_65 import 非月卡菜地
-from action_define.action_animal import 非月卡牧场
+from action_define.action_general import *
+from action_define.action_farmland_64 import 非月卡菜地64
+from action_define.action_farmland_65 import 非月卡菜地65
+from action_define.action_animal_64 import 非月卡牧场64
+from action_define.action_animal_65 import 非月卡牧场65
 from action_define.action_fishpond import 非月卡鱼塘
 from action_define.action_catch_fish import 炸鱼
 from action_define.action_processor import 非月卡加工器
-from action_define.action_general import *
-from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器
-from action_define.action_farmland_less65 import 非月卡菜地小于65级
+from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器,非月卡餐厅_步行WASD
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
 
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -24,10 +25,11 @@ else:
 
 
 actions_tree = {
-    "无人机": 无人机v2,
-    "非月卡菜地": 非月卡菜地,
-    "非月卡菜地64": 非月卡菜地小于65级,
-    "非月卡牧场": 非月卡牧场,
+    "无人机": 无人机v2,    
+    "非月卡菜地64": 非月卡菜地64,
+    "非月卡菜地65": 非月卡菜地65,
+    "非月卡牧场64": 非月卡牧场64,
+    "非月卡牧场65": 非月卡牧场65,
     "非月卡鱼塘": 非月卡鱼塘,
     "开鱼塘": 开鱼塘,
     "收鱼缸": 收鱼缸,
@@ -78,6 +80,7 @@ def custom_script():
         "小红狐牧场": 小红狐牧场,
         "小红狐鱼塘": 小红狐鱼塘,
         "非月卡餐厅发射器": 非月卡餐厅_发射器,
+        "非月卡餐厅WASD": 非月卡餐厅_步行WASD,
     }
     for i in actions_tree:
         path_action_tree = os.path.join(path_folder, f"custom/{i}.yaml")

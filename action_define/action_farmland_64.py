@@ -60,7 +60,7 @@ def MyfarmRow(start_position=第1行地初始位置):
 菜地6 = MyfarmRow(start_position=第6行地初始位置)
 
 
-非月卡菜地小于65级 = (
+非月卡菜地64 = (
     *菜地1,
     *菜地2,
     *菜地3,

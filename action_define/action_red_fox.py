@@ -1,7 +1,7 @@
 from action_define.action_base import *
 from action_define.action_fishpond import 走到鱼塘边
-from action_define.action_animal import 非月卡牧场
-from action_define.action_farmland_less65 import 非月卡菜地小于65级
+from action_define.action_animal_65 import 非月卡牧场
+from action_define.action_farmland_64 import 非月卡菜地小于65级
 
 去小红狐家 = (
     点击社交,

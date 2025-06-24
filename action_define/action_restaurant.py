@@ -29,7 +29,7 @@ from action_define.action_base import *
     step_sleep(12),
 )
 
-# 步行去餐厅门口
+# 步行去餐厅门口, 鼠标模拟按键
 去餐厅门口v2 = (
     激活界面,
     step_sleep(1),
@@ -49,7 +49,6 @@ from action_define.action_base import *
     鼠标左键松开,
     step_sleep(1),
 )
-
 # 步行进餐厅
 进入餐厅v2 = (
     *去餐厅门口v2,
@@ -65,6 +64,64 @@ from action_define.action_base import *
     step_sleep(12),
 )
 
+# 步行去餐厅门口, WASD方式
+去餐厅门口v3 = (
+    激活界面,
+    step_sleep(1),
+    复位鼠标,
+    step_sleep(1),
+    弹窗取消,
+    step_sleep(0.5),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "W",
+        "delay": 1100,
+    },
+    step_sleep(1),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "A",
+        "delay": 2500,
+    },
+    step_sleep(1),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "W",
+        "delay": 1500,
+    },
+    step_sleep(1),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "A",
+        "delay": 2500,
+    },
+    step_sleep(1),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "W",
+        "delay": 200,
+    },
+)
+
+# 步行进餐厅
+进入餐厅v3 = (
+    *去餐厅门口v3,
+    大功能键,
+    step_sleep(0.5),
+    {
+        "step": "进入餐厅",
+        "type": "key",
+        "input": "A",
+        "delay": 1000,
+    },
+    大功能键,
+    step_sleep(12),
+)
 
 招待顾客 = (
     左侧复位,
@@ -194,3 +251,4 @@ from action_define.action_base import *
 )
 非月卡餐厅_发射器 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
 非月卡餐厅 = (*进入餐厅v2, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
+非月卡餐厅_步行WASD = (*进入餐厅v3, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
