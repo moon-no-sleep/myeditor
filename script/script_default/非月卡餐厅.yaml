@@ -72,7 +72,7 @@
   - 370
 - step: 延迟
   type: sleep
-  time: 6
+  time: 5
 - *id005
 - step: 延迟
   type: sleep
@@ -93,6 +93,13 @@
   type: sleep
   time: 0.4
 - *id005
+- step: 延迟
+  type: sleep
+  time: 1
+- step: 往前走
+  type: key
+  input: A
+  delay: 400
 - step: 延迟
   type: sleep
   time: 1

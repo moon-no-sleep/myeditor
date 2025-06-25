@@ -89,8 +89,18 @@
   time: 3
 - step: 走进小屋
   type: key
-  input: A
+  input: W
   delay: 1500
+- step: 延迟
+  type: sleep
+  time: 0.5
+- &id003
+  step: 大功能键
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 850
+  - 449
 - step: 延迟
   type: sleep
   time: 12
@@ -109,13 +119,7 @@
   type: key
   input: D
   delay: 2000
-- &id003
-  step: 大功能键
-  type: mouse
-  input: click
-  point: !!python/tuple
-  - 850
-  - 449
+- *id003
 - &id005
   step: 延迟
   type: sleep
@@ -312,5 +316,5 @@
 - step: 走出小屋
   type: key
   input: S
-  delay: 200
+  delay: 800
 - *id002

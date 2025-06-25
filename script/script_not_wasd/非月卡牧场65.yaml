@@ -79,8 +79,8 @@
   type: mouse
   input: move
   point: !!python/tuple
-  - 504
-  - 280
+  - 586
+  - 385
 - step: 延迟
   type: sleep
   time: 0.5
@@ -99,333 +99,171 @@
   - 450
 - step: 延迟
   type: sleep
-  time: 6
-- &id002
-  step: 走到下一块地
+  time: 5
+- step: 调方向
   type: key
-  input: A
-  delay: 1100
-- &id003
-  step: 延迟
-  type: sleep
-  time: 3
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 微调位置
-  type: key
-  input: W
-  delay: 300
-- step: 延迟
-  type: sleep
-  time: 3
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id015
-- step: 拉动视角1
-  type: mouse
-  input: move
-  point: *id016
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角2
-  type: mouse
-  input: down
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角3
-  type: mouse
-  input: move
-  point: !!python/tuple
-  - 491
-  - 288
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角4
-  type: mouse
-  input: up
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 发射
-  type: mouse
-  input: click
-  point: *id017
-- step: 延迟
-  type: sleep
-  time: 6
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id015
-- step: 拉动视角1
-  type: mouse
-  input: move
-  point: *id016
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角2
-  type: mouse
-  input: down
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角3
-  type: mouse
-  input: move
-  point: !!python/tuple
-  - 469
-  - 297
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角4
-  type: mouse
-  input: up
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 发射
-  type: mouse
-  input: click
-  point: *id017
-- step: 延迟
-  type: sleep
-  time: 6
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id015
-- step: 拉动视角1
-  type: mouse
-  input: move
-  point: *id016
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角2
-  type: mouse
-  input: down
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角3
-  type: mouse
-  input: move
-  point: !!python/tuple
-  - 438
-  - 308
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角4
-  type: mouse
-  input: up
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 发射
-  type: mouse
-  input: click
-  point: *id017
-- step: 延迟
-  type: sleep
-  time: 6
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id015
-- step: 拉动视角1
-  type: mouse
-  input: move
-  point: *id016
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角2
-  type: mouse
-  input: down
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角3
-  type: mouse
-  input: move
-  point: !!python/tuple
-  - 405
-  - 320
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角4
-  type: mouse
-  input: up
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 发射
-  type: mouse
-  input: click
-  point: *id017
-- step: 延迟
-  type: sleep
-  time: 6
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
-- *id011
-- *id012
-- *id013
-- *id014
-- *id015
-- step: 拉动视角1
-  type: mouse
-  input: move
-  point: *id016
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角2
-  type: mouse
-  input: down
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角3
-  type: mouse
-  input: move
-  point: !!python/tuple
-  - 364
-  - 324
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 拉动视角4
-  type: mouse
-  input: up
-  point: null
-- step: 延迟
-  type: sleep
-  time: 0.5
-- step: 发射
-  type: mouse
-  input: click
-  point: *id017
-- step: 延迟
-  type: sleep
-  time: 6
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- *id002
-- *id003
-- step: 延迟
-  type: sleep
-  time: 2
+  input: D
+  delay: 200
 - step: 延迟
   type: sleep
   time: 1
+- &id002
+  step: 走到下一块地
+  type: key
+  input: W
+  delay: 1300
+- &id003
+  step: 延迟
+  type: sleep
+  time: 2.5
+- *id002
+- *id003
+- *id002
+- *id003
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
+- *id014
+- *id015
+- step: 拉动视角1
+  type: mouse
+  input: move
+  point: *id016
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角2
+  type: mouse
+  input: down
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角3
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 680
+  - 389
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角4
+  type: mouse
+  input: up
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 发射
+  type: mouse
+  input: click
+  point: *id017
+- step: 延迟
+  type: sleep
+  time: 5
+- step: 调方向
+  type: key
+  input: A
+  delay: 200
+- step: 延迟
+  type: sleep
+  time: 1
+- *id002
+- *id003
+- *id002
+- *id003
+- *id002
+- *id003
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
+- *id014
+- *id015
+- step: 拉动视角1
+  type: mouse
+  input: move
+  point: *id016
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角2
+  type: mouse
+  input: down
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角3
+  type: mouse
+  input: move
+  point: !!python/tuple
+  - 761
+  - 368
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 拉动视角4
+  type: mouse
+  input: up
+  point: null
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 发射
+  type: mouse
+  input: click
+  point: *id017
+- step: 延迟
+  type: sleep
+  time: 5
+- &id018
+  step: 走到下一块地
+  type: down
+  input: A
+  delay: null
+- &id019
+  step: 走到下一块地
+  type: key
+  input: W
+  delay: 1300
+- &id020
+  step: 走到下一块地
+  type: up
+  input: A
+  delay: null
+- &id021
+  step: 延迟
+  type: sleep
+  time: 2.5
+- *id018
+- *id019
+- *id020
+- *id021
+- *id018
+- *id019
+- *id020
+- *id021
+- *id018
+- *id019
+- *id020
+- *id021
 - *id006

@@ -13,16 +13,35 @@ from action_define.action_base import *
     {
         "step": "进入餐厅",
         "type": "key",
-        "input": "A",
-        "delay": 1500,
+        "input": "W",
+        "delay": 1000,
     },
     大功能键,
     step_sleep(0.5),
     {
+        "step": "门口位置",
+        "type": "down",
+        "input": "W",
+        "delay": None,
+    },
+    {
+        "step": "门口位置",
+        "type": "key",
+        "input": "D",
+        "delay": 200,
+    },
+    {
+        "step": "门口位置",
+        "type": "up",
+        "input": "W",
+        "delay": None,
+    },
+    step_sleep(0.5),
+    {
         "step": "进入餐厅",
         "type": "key",
-        "input": "S",
-        "delay": 200,
+        "input": "W",
+        "delay": 300,
     },
     step_sleep(1),
     大功能键,
@@ -41,12 +60,19 @@ from action_define.action_base import *
     step_sleep(1),
     鼠标左键松开,
     *mouse_WASD(165),
-    step_sleep(6),
+    step_sleep(5),
     鼠标左键松开,
     step_sleep(0.5),
     *mouse_WASD(225),
     step_sleep(0.4),
     鼠标左键松开,
+    step_sleep(1),
+    {
+        "step": "往前走",
+        "type": "key",
+        "input": "A",
+        "delay": 400,
+    },
     step_sleep(1),
 )
 # 步行进餐厅
@@ -251,4 +277,4 @@ from action_define.action_base import *
 )
 非月卡餐厅_发射器 = (*进入餐厅, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
 非月卡餐厅 = (*进入餐厅v2, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
-非月卡餐厅_步行WASD = (*进入餐厅v3, *补充食材, *招待顾客, *预约顾客, *离开餐厅)
+非月卡餐厅_notWASD = (*进入餐厅v3, *补充食材, *招待顾客, *预约顾客, *离开餐厅)

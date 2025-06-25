@@ -90,16 +90,31 @@
   time: 3.5
 - step: 进入餐厅
   type: key
-  input: A
-  delay: 1500
+  input: W
+  delay: 1000
 - *id002
+- step: 延迟
+  type: sleep
+  time: 0.5
+- step: 门口位置
+  type: down
+  input: W
+  delay: null
+- step: 门口位置
+  type: key
+  input: D
+  delay: 200
+- step: 门口位置
+  type: up
+  input: W
+  delay: null
 - step: 延迟
   type: sleep
   time: 0.5
 - step: 进入餐厅
   type: key
-  input: S
-  delay: 200
+  input: W
+  delay: 300
 - step: 延迟
   type: sleep
   time: 1

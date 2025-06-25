@@ -57,7 +57,7 @@
 - step: 走到鱼塘边
   type: key
   input: W
-  delay: 1100
+  delay: 1900
 - step: 延迟
   type: sleep
   time: 1

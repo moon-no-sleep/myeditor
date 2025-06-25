@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     from result.generate_yaml import main_script, custom_script
     # main_script("all")  # 更新所有脚本
-    # # main_script("非月卡菜地小于65")  # 单点更新指定脚本
+    main_script("非月卡菜地64")  # 单点更新指定脚本
 
-    custom_script() #更新自定义模块脚本
+    # custom_script() #更新自定义模块脚本
 
     print("更新完成")

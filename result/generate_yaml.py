@@ -11,7 +11,7 @@ from action_define.action_animal_65 import 非月卡牧场65
 from action_define.action_fishpond import 非月卡鱼塘
 from action_define.action_catch_fish import 炸鱼
 from action_define.action_processor import 非月卡加工器
-from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器,非月卡餐厅_步行WASD
+from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器,非月卡餐厅_notWASD
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
 
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -75,12 +75,12 @@ def main_script(x="all"):
 def custom_script():
     """生成自定义脚本"""
     actions_tree = {
-        "小红狐全部": 小红狐全部,
-        "小红狐菜地": 小红狐菜地,
-        "小红狐牧场": 小红狐牧场,
-        "小红狐鱼塘": 小红狐鱼塘,
+        # "小红狐全部": 小红狐全部,
+        # "小红狐菜地": 小红狐菜地,
+        # "小红狐牧场": 小红狐牧场,
+        # "小红狐鱼塘": 小红狐鱼塘,
         "非月卡餐厅发射器": 非月卡餐厅_发射器,
-        "非月卡餐厅WASD": 非月卡餐厅_步行WASD,
+        "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
     }
     for i in actions_tree:
         path_action_tree = os.path.join(path_folder, f"custom/{i}.yaml")

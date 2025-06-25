@@ -46,9 +46,11 @@ from action_define.action_base import *
     {
         "step": "走进小屋",
         "type": "key",
-        "input": "A",
+        "input": "W",
         "delay": 1500,
     },
+    step_sleep(0.5),
+    大功能键,
     step_sleep(12),
     复位鼠标,
     step_sleep(1),
@@ -113,7 +115,7 @@ from action_define.action_base import *
         "step": "走出小屋",
         "type": "key",
         "input": "S",
-        "delay": 200,
+        "delay": 800,
     },
     复位鼠标,
 )

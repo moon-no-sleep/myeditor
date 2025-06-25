@@ -63,15 +63,6 @@ def MyfarmRow(start_position=第2行地初始位置):
 牧场5 = MyfarmRow(start_position=第5行地初始位置)
 
 
-非月卡牧场1x = (
-    *牧场1,
-    *牧场2,
-    *牧场3,
-    *牧场4,
-    *牧场5,
-    复位鼠标,
-)
-
 非月卡牧场64 = (
     *[
         *牧场1,

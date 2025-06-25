@@ -36,7 +36,7 @@ from action_define.action_base import *
         "step": "走到鱼塘边",
         "type": "key",
         "input": "W",
-        "delay": 1100,
+        "delay": 1900,
     },
     step_sleep(1),
     点击普通鱼塘解锁,

@@ -1,7 +1,7 @@
 from action_define.action_base import *
 from action_define.action_fishpond import 走到鱼塘边
-from action_define.action_animal_65 import 非月卡牧场
-from action_define.action_farmland_64 import 非月卡菜地小于65级
+from action_define.action_animal_64 import 非月卡牧场64
+from action_define.action_farmland_64 import 非月卡菜地64
 
 去小红狐家 = (
     点击社交,
@@ -36,8 +36,8 @@ from action_define.action_farmland_64 import 非月卡菜地小于65级
     step_sleep(1),
 )
 
-_小红狐牧场 = (*非月卡牧场,)
-_小红狐菜地 = (*非月卡菜地小于65级,)
+_小红狐牧场 = (*非月卡牧场64,)
+_小红狐菜地 = (*非月卡菜地64,)
 _小红狐鱼塘 = (
     *走到鱼塘边,
     *[大功能键, step_sleep(2)] * 10,
