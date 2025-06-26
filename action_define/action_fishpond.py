@@ -29,7 +29,7 @@ from action_define.action_base import *
         "step": "走到鱼塘边",
         "type": "key",
         "input": "W",
-        "delay": 1900,
+        "delay": 1600,
     },
     step_sleep(1),
 )

@@ -403,4 +403,22 @@
 - step: 延迟
   type: sleep
   time: 1
+- &id015
+  step: 头像复位
+  type: mouse
+  input: click
+  point: !!python/tuple
+  - 40
+  - 50
+- step: 延迟
+  type: sleep
+  time: 1
+- *id015
+- step: 延迟
+  type: sleep
+  time: 1
+- *id010
+- step: 延迟
+  type: sleep
+  time: 1
 - *id007
