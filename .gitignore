@@ -9,6 +9,7 @@ __pycache__/
 # 自定义
 _test/
 test.py
+test_generate_script.py
 
 # Distribution / packaging
 .Python

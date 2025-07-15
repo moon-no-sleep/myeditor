@@ -1,6 +1,5 @@
-import os
-import yaml
-
+import json
+from Model.model_script import DB_Scrpit, Model_Script, data_model_format
 from config.config import *
 from action_define.action_base import *
 from action_define.action_general import *
@@ -8,24 +7,19 @@ from action_define.action_farmland_64 import 非月卡菜地64
 from action_define.action_farmland_65 import 非月卡菜地65
 from action_define.action_animal_64 import 非月卡牧场64
 from action_define.action_animal_65 import 非月卡牧场65
-from action_define.action_fishpond import 非月卡鱼塘
-from action_define.action_catch_fish import 炸鱼
+from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边
+from action_define.action_catch_fish import 炸鱼前, 炸鱼中
 from action_define.action_processor import 非月卡加工器
-from action_define.action_restaurant import 非月卡餐厅, 非月卡餐厅_发射器,非月卡餐厅_notWASD
+from action_define.action_restaurant import (
+    非月卡餐厅,
+    非月卡餐厅_发射器,
+    非月卡餐厅_notWASD,
+)
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
-
-current_path = os.path.dirname(os.path.abspath(__file__))
-path_script_dir = os.path.dirname(current_path)
-if 有摇杆:
-    path_folder = os.path.join(path_script_dir, f"script/script_default")
-    print("有摇杆路径")
-else:
-    path_folder = os.path.join(path_script_dir, f"script/script_not_wasd")
-    print("无摇杆路径")
 
 
 actions_tree = {
-    "无人机": 无人机v2,    
+    "无人机": 无人机v2,
     "非月卡菜地64": 非月卡菜地64,
     "非月卡菜地65": 非月卡菜地65,
     "非月卡牧场64": 非月卡牧场64,
@@ -39,21 +33,24 @@ actions_tree = {
     "许愿金币": 许愿金币,
     "摸小狗": 摸小狗,
     "投喂小狗": 投喂小狗,
-    "炸鱼": 炸鱼,
     "非月卡加工器": 非月卡加工器,
     "非月卡餐厅": 非月卡餐厅,
+    "走到鱼塘边": 走到鱼塘边,
+    "炸鱼前": 炸鱼前,
+    "炸鱼前": 炸鱼中,
 }
 
 
 def write_script(i):
-    """写入文件
+    data = actions_tree[i]
+    if 有摇杆:
+        table = "default_" + i
+    else:
+        table = "notwasd_" + i
 
-    Args:
-        i (str): 指定文件
-    """
-    path_action_tree = os.path.join(path_folder, f"{i}.yaml")
-    with open(path_action_tree, "w", encoding="utf-8") as f:
-        yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
+    db_recognition = DB_Scrpit(table)
+    db_recognition.create_table()
+    db_recognition.write_db(data_model_format(data))
 
 
 def main_script(x="all"):
@@ -83,7 +80,8 @@ def custom_script():
         "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
     }
     for i in actions_tree:
-        path_action_tree = os.path.join(path_folder, f"custom/{i}.yaml")
-        with open(path_action_tree, "w", encoding="utf-8") as f:
-            yaml.dump(actions_tree[i], f, allow_unicode=True, sort_keys=False)
-    print("自定义脚本已生成")
+        data = actions_tree[i]
+        table = "custom_" + i
+        db_recognition = DB_Scrpit(table)
+        db_recognition.create_table()
+        db_recognition.write_db(data_model_format(data))
