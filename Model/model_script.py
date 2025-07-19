@@ -1,28 +1,6 @@
 import json
-import os
-import sqlite3
 from pydantic import BaseModel
-
-from env import current_path
-
-
-def data_model_format(data):
-    """转换脚本dict数据, 补充缺失的字段值. 先将json数据转为model格式, 再重新转换为dict
-
-    Args:
-        data (tuple): 脚本
-
-    Returns:
-        list: 转换后的脚本
-    """
-    script = []
-    for i in data:
-        a = Model_Script.model_validate(i)
-        d = a.model_dump()
-        if d.get("point") is not None:
-            d["point"] = json.dumps(d.get("point"))
-        script.append(d)
-    return script
+from .baseTable import BaseTable
 
 
 class Model_Script(BaseModel):
@@ -36,68 +14,52 @@ class Model_Script(BaseModel):
     remark: str | None = None
 
 
-class DB_Scrpit:
-    def __init__(self, table):
-        path = os.path.join(current_path, "script/db_script.db")
-        self.con = sqlite3.connect(path)
-        self.cur = self.con.cursor()
-        self.table = table
-        self.columns = list(Model_Script.model_fields.keys())
+class DB_Scrpit(BaseTable):
+    def __init__(self, table, db="script/db_script.db"):
+        super().__init__(table, db)
 
         self.create_sql = f""" CREATE TABLE IF NOT EXISTS `{self.table}`(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 step TEXT,
-                type INT,
+                type TEXT,
                 input TEXT,
-                point INT,
-                delay TEXT,
-                time TEXT,
+                point TEXT,
+                delay INT,
+                time REAL,
                 remark TEXT
                 );
         """
 
-    def create_table(self):
+    def format_db_data_into(self, data):
+        """转换脚本dict数据, 补充缺失的字段值. 先将json数据转为model格式, 再重新转换为dict
 
-        try:
-            self.cur.execute(self.create_sql)
-        except Exception as e:
-            print(e)
-        self.con.commit()
+        Args:
+            data (tuple): 脚本
 
-    def write_db(self, data: list):
-        columns = ", ".join([f"`{s}`" for s in self.columns])
-        placeholders = ", ".join("?" * len(self.columns))
-        sql = f"""INSERT OR REPLACE INTO `{self.table}` ({columns})VALUES({placeholders})"""
-
+        Returns:
+            list: 转换后的脚本
+        """
+        script = []
         for i in data:
-            self.cur.execute(
-                sql,
-                list(i.values()),
-            )
-        self.con.commit()
+            a = Model_Script.model_validate(i)
+            d = a.model_dump()
+            if d.get("point") is not None:
+                d["point"] = json.dumps(d.get("point"))
+            script.append(d)
+        return script
 
-    def update_db(self, data):
-        columns = "= ? , ".join(data[0].keys())
+    def format_db_data_out(self, data):
+        """转换脚本dict数据, 将point的值 json.loads
 
-        sql = f"""UPDATE {self.table} SET ({columns}) WHERE id = {i['id']}"""
+        Args:
+            data (tuple): 脚本
 
-        for i in data:
-            self.cur.execute(
-                sql,
-                list(i.values()),
-            )
-        self.con.commit()
-
-    def read_db(self) -> list:
-        data = []
-        sql = f"""   SELECT * FROM {self.table}; """
-        self.cur.execute(sql)
-        r = self.cur.fetchall()
-        for i in r:
-            result = dict(zip(self.columns, i))
-            data.append(result)
-        return data
-
-    def close_db(self):
-        """关闭数据库"""
-        self.con.close()
+        Returns:
+            list: 转换后的脚本
+        """
+        script = []
+        for d in data:
+            if d.get("point") is not None:
+                d["point"] = json.loads(d.get("point"))
+            script.append(d)
+        return script

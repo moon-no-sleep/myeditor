@@ -1,5 +1,4 @@
-import json
-from Model.model_script import DB_Scrpit, Model_Script, data_model_format
+from Model.model_script import DB_Scrpit
 from config.config import *
 from action_define.action_base import *
 from action_define.action_general import *
@@ -7,7 +6,7 @@ from action_define.action_farmland_64 import 非月卡菜地64
 from action_define.action_farmland_65 import 非月卡菜地65
 from action_define.action_animal_64 import 非月卡牧场64
 from action_define.action_animal_65 import 非月卡牧场65
-from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边
+from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边, 钓鱼3连, 钓鱼后
 from action_define.action_catch_fish import 炸鱼前, 炸鱼中
 from action_define.action_processor import 非月卡加工器
 from action_define.action_restaurant import (
@@ -38,6 +37,10 @@ actions_tree = {
     "走到鱼塘边": 走到鱼塘边,
     "炸鱼前": 炸鱼前,
     "炸鱼中": 炸鱼中,
+    "钓鱼3连": 钓鱼3连,
+    "钓鱼后复位": 钓鱼后,
+    "非月卡餐厅发射器": 非月卡餐厅_发射器,
+    "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
 }
 
 
@@ -48,9 +51,10 @@ def write_script(i):
     else:
         table = "notwasd_" + i
 
-    db_recognition = DB_Scrpit(table)
-    db_recognition.create_table()
-    db_recognition.write_db(data_model_format(data))
+    db = DB_Scrpit(table)
+    db.create_table()
+    db.write_db(db.format_db_data_into(data))
+    db.close_db()
 
 
 def main_script(x="all"):
@@ -67,21 +71,3 @@ def main_script(x="all"):
     else:
         # 单点更新
         write_script(x)
-
-
-def custom_script():
-    """生成自定义脚本"""
-    actions_tree = {
-        # "小红狐全部": 小红狐全部,
-        # "小红狐菜地": 小红狐菜地,
-        # "小红狐牧场": 小红狐牧场,
-        # "小红狐鱼塘": 小红狐鱼塘,
-        "非月卡餐厅发射器": 非月卡餐厅_发射器,
-        "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
-    }
-    for i in actions_tree:
-        data = actions_tree[i]
-        table = "custom_" + i
-        db_recognition = DB_Scrpit(table)
-        db_recognition.create_table()
-        db_recognition.write_db(data_model_format(data))

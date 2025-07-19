@@ -33,9 +33,8 @@ from action_define.action_base import *
     },
     step_sleep(1),
 )
-非月卡鱼塘 = (
-    *走到鱼塘边,
-    *钓鱼3连 * 22,
+
+钓鱼后 = (
     step_sleep(0.5),
     Q键位置,
     step_sleep(1),
@@ -47,3 +46,4 @@ from action_define.action_base import *
     step_sleep(1),
     复位鼠标,
 )
+非月卡鱼塘 = (*走到鱼塘边, *钓鱼3连 * 22, *钓鱼后)
