@@ -174,7 +174,7 @@ Enter键位 = {
     "step": "点击解锁",
     "type": "mouse",
     "input": "click",
-    "point": (128, 300),
+    "point": (126, 295),
 }
 
 点击普通鱼塘解锁_无摇杆 = {
@@ -188,7 +188,7 @@ Enter键位 = {
     "step": "点击解锁",
     "type": "mouse",
     "input": "click",
-    "point": (128, 328),
+    "point": (126, 337),
 }
 
 点击金彩鱼塘解锁_无摇杆 = {

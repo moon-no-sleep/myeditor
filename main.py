@@ -1,3 +1,4 @@
+from Model.code_all import g_default_codeList
 from config.config import set_mode
 
 
@@ -15,8 +16,12 @@ def main(a=True):
 
     print("更新完成")
 
+def code_list():
+    g_default_codeList()
+
 
 if __name__ == "__main__":
     # 请先设置有摇杆或无摇杆模式
     # main(True)
-    main(False)
+    # main(False)
+    code_list()

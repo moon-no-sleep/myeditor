@@ -63,3 +63,29 @@ class DB_Scrpit(BaseTable):
                 d["point"] = json.loads(d.get("point"))
             script.append(d)
         return script
+
+
+class Model_Code(BaseModel):
+    id: int | None = None
+    name: str | None = None
+    code: str
+    team: int
+    decode: list | None = None
+    uuid: int | None = None
+    remark: str | None = None
+
+
+class DB_CodeList(BaseTable):
+    def __init__(self, table="code_list", db="script/db_script.db"):
+        super().__init__(table, db)
+
+        self.create_sql = f""" CREATE TABLE IF NOT EXISTS `{self.table}`(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT,
+                code TEXT UNIQUE,
+                team INT,
+                decode TEXT,
+                uuid INT,
+                remark TEXT
+                );
+        """

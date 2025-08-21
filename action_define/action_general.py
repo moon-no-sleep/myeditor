@@ -23,31 +23,6 @@ from action_define.action_base import *
 )
 
 
-开鱼塘 = (
-    *发射器,
-    {
-        "step": "发射",
-        "type": "mouse",
-        "input": "click",
-        "point": (880, 450),
-    },
-    step_sleep(2.5),
-    {
-        "step": "走到鱼塘边",
-        "type": "key",
-        "input": "W",
-        "delay": 1900,
-    },
-    step_sleep(1),
-    点击普通鱼塘解锁,
-    step_sleep(1),
-    确认解锁,
-    点击金彩鱼塘解锁,
-    step_sleep(1),
-    确认解锁,
-    step_sleep(1),
-)
-
 收鱼缸 = (
     *发射器,
     *MyView(a=(459, 212)),

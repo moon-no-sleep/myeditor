@@ -7,7 +7,14 @@ from action_define.action_farmland_65 import 非月卡菜地65
 from action_define.action_animal_64 import 非月卡牧场64
 from action_define.action_animal_65 import 非月卡牧场65
 from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边, 钓鱼3连, 钓鱼后
-from action_define.action_catch_fish import 炸鱼前, 炸鱼中
+from action_define.action_catch_fish import (
+    炸鱼前,
+    炸鱼中,
+    开鱼塘,
+    开鱼塘2,
+    回家,
+    输入好友名称,
+)
 from action_define.action_processor import 非月卡加工器
 from action_define.action_restaurant import (
     非月卡餐厅,
@@ -25,6 +32,7 @@ actions_tree = {
     "非月卡牧场65": 非月卡牧场65,
     "非月卡鱼塘": 非月卡鱼塘,
     "开鱼塘": 开鱼塘,
+    "开鱼塘2": 开鱼塘2,
     "收鱼缸": 收鱼缸,
     "泡温泉": 泡温泉,
     "喝咖啡": 喝咖啡,
@@ -41,6 +49,8 @@ actions_tree = {
     "钓鱼后复位": 钓鱼后,
     "非月卡餐厅发射器": 非月卡餐厅_发射器,
     "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
+    "回家": 回家,
+    "输入好友名称": 输入好友名称,
 }
 
 
