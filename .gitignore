@@ -9,6 +9,7 @@ __pycache__/
 # 自定义
 _obsolete
 _test/
+.draft
 test.py
 test_generate_script.py
 

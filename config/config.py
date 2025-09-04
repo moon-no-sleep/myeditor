@@ -4,7 +4,7 @@ import tomllib
 
 def set_mode(有摇杆=True):
     doc = {"有摇杆": 有摇杆}
-    with open("action_define/conf.toml", "wb") as f:
+    with open("config/conf.toml", "wb") as f:
         tomli_w.dump(doc, f)
 
 
@@ -13,8 +13,10 @@ def read_mode():
 
     Returns:
         dict: 摇杆模式
-    """    
-    with open("action_define/conf.toml", "rb") as f:
+    """
+    with open("config/conf.toml", "rb") as f:
         data = tomllib.load(f)
     return data
 
+
+有摇杆 = read_mode()["有摇杆"]

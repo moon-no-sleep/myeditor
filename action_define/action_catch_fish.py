@@ -72,11 +72,27 @@ from action_define.action_fishpond import 走到鱼塘边
 
 炸鱼 = {"炸鱼前": 炸鱼前, "炸鱼中": 炸鱼中}
 
+输入好友名称2 = [
+    {
+        "step": "键入好友昵称",
+        "type": "insert",
+        "input": "好友昵称/UID",
+        "delay": None,
+    },
+    step_sleep(1),
+    Enter键位,
+    step_sleep(0.5),
+    点击拜访,
+    step_sleep(0.5),
+    弹窗取消,
+    step_sleep(15),
+]
+
 输入好友名称 = [
     {
         "step": "键入好友昵称",
         "type": "insert",
         "input": "好友昵称/UID",
         "delay": None,
-    }
+    },
 ]

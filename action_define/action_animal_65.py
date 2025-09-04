@@ -91,6 +91,13 @@ from action_define.action_base import *
     },
     step_sleep(5),
     *下一块地3 * 4,
+    {
+        "step": "微调",
+        "type": "key",
+        "input": "D",
+        "delay": 200,
+    },
+    step_sleep(2.5),
 )
 
 非月卡牧场65 = (

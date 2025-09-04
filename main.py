@@ -1,13 +1,12 @@
 from Model.code_all import g_default_codeList
-from config.config import set_mode
+from config.config import read_mode, set_mode
+from config import config
 
 
 def main(a=True):
     set_mode(有摇杆=a)
-
-    from action_define.action_base import 有摇杆
-
-    print("有摇杆模式: ", 有摇杆)
+    config.有摇杆 = read_mode()["有摇杆"]
+    print("有摇杆模式: ", config.有摇杆)
 
     from generator.generate_sqlite import main_script
 
@@ -16,8 +15,10 @@ def main(a=True):
 
     print("更新完成")
 
+
 def code_list():
     g_default_codeList()
+    print("更新完成")
 
 
 if __name__ == "__main__":
@@ -25,3 +26,5 @@ if __name__ == "__main__":
     # main(True)
     # main(False)
     code_list()
+
+    print("结束")
