@@ -7,6 +7,7 @@ from action_define.action_farmland_65 import 非月卡菜地65
 from action_define.action_animal_64 import 非月卡牧场64
 from action_define.action_animal_65 import 非月卡牧场65
 from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边, 钓鱼3连, 钓鱼后
+from action_define.action_fishpond_65 import 非月卡鱼塘65, 走到鱼塘边65, 钓鱼3连65, 钓鱼后65
 from action_define.action_catch_fish import (
     炸鱼前,
     炸鱼中,
@@ -50,7 +51,8 @@ def main_script(x="all"):
         "非月卡菜地65": 非月卡菜地65,
         "非月卡牧场64": 非月卡牧场64,
         "非月卡牧场65": 非月卡牧场65,
-        "非月卡鱼塘": 非月卡鱼塘,
+        "非月卡鱼塘64": 非月卡鱼塘,
+        "非月卡鱼塘65": 非月卡鱼塘65,
         "开鱼塘": 开鱼塘,
         "开鱼塘2": 开鱼塘2,
         "收鱼缸": 收鱼缸,
@@ -61,13 +63,16 @@ def main_script(x="all"):
         "摸小狗": 摸小狗,
         "投喂小狗": 投喂小狗,
         "非月卡加工器": 非月卡加工器,
-        "非月卡餐厅": 非月卡餐厅,
+        "非月卡餐厅": 非月卡餐厅_发射器,
         "走到鱼塘边": 走到鱼塘边,
+        "走到鱼塘边65": 走到鱼塘边65,
         "炸鱼前": 炸鱼前,
         "炸鱼中": 炸鱼中,
         "钓鱼3连": 钓鱼3连,
+        "钓鱼3连65": 钓鱼3连65,
         "钓鱼后复位": 钓鱼后,
-        "非月卡餐厅发射器": 非月卡餐厅_发射器,
+        "钓鱼后复位65": 钓鱼后65,
+        "非月卡餐厅步行": 非月卡餐厅,
         "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
         "回家": 回家,
         "输入好友名称": 输入好友名称,
