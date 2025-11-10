@@ -1,7 +1,7 @@
 from action_define.action_base import *
 
 
-无人机v2 = (
+无人机v2_obs = (
     激活界面,
     step_sleep(1),
     复位鼠标,
@@ -22,6 +22,35 @@ from action_define.action_base import *
     step_sleep(1),
 )
 
+无人机v2 = (
+    激活界面,
+    step_sleep(1),
+    复位鼠标,
+    step_sleep(0.5),
+    弹窗取消,
+    step_sleep(0.5),
+    {
+        "step": "移动到无人机旁1",
+        "type": "key",
+        "input": "A",
+        "delay": 160,
+    },
+    跳跃键,
+    {
+        "step": "移动到无人机旁2",
+        "type": "key",
+        "input": "A",
+        "delay": 500,
+    },
+    step_sleep(0.5),
+    {
+        "step": "执行无人机",
+        "type": "key",
+        "input": "Q",
+        "delay": None,
+    },
+    step_sleep(1),
+)
 
 收鱼缸 = (
     *发射器,

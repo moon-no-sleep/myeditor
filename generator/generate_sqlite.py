@@ -7,7 +7,12 @@ from action_define.action_farmland_65 import 非月卡菜地65
 from action_define.action_animal_64 import 非月卡牧场64
 from action_define.action_animal_65 import 非月卡牧场65
 from action_define.action_fishpond import 非月卡鱼塘, 走到鱼塘边, 钓鱼3连, 钓鱼后
-from action_define.action_fishpond_65 import 非月卡鱼塘65, 走到鱼塘边65, 钓鱼3连65, 钓鱼后65
+from action_define.action_fishpond_65 import (
+    非月卡鱼塘65,
+    走到鱼塘边65,
+    钓鱼3连65,
+    钓鱼后65,
+)
 from action_define.action_catch_fish import (
     炸鱼前,
     炸鱼中,
@@ -22,8 +27,10 @@ from action_define.action_restaurant import (
     非月卡餐厅,
     非月卡餐厅_发射器,
     非月卡餐厅_notWASD,
+    非月卡餐厅_前台SW,
 )
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
+from action_define.action_magic_farm import 奇迹农场_无人机, 奇迹农场_手动
 
 
 def write_script(i, actions_tree):
@@ -74,9 +81,12 @@ def main_script(x="all"):
         "钓鱼后复位65": 钓鱼后65,
         "非月卡餐厅步行": 非月卡餐厅,
         "非月卡餐厅notWASD": 非月卡餐厅_notWASD,
+        "非月卡餐厅_前台SW": 非月卡餐厅_前台SW,
         "回家": 回家,
         "输入好友名称": 输入好友名称,
         "输入好友名称2": 输入好友名称2,
+        "奇迹农场_无人机": 奇迹农场_无人机,
+        "奇迹农场_手动": 奇迹农场_手动,
     }
 
     if x == "all":

@@ -2,17 +2,16 @@ from action_define.action_base import *
 
 钓鱼3连65 = [
     *[
-        大功能键,
+        {
+            "step": "钓鱼留白",
+            "type": "mouse",
+            "input": "click",
+            "point": (100, 512),  # 点击左侧, 翻页鱼卡
+        },
         step_sleep(0.5),
     ]
-    * 3,
-    {
-        "step": "钓鱼留白",
-        "type": "mouse",
-        "input": "click",
-        "point": (100, 512),  # 点击左侧, 翻页鱼卡
-    },
-    step_sleep(1),
+    * 4,
+    step_sleep(0.5),
 ]
 
 走到鱼塘边65 = (
@@ -23,12 +22,12 @@ from action_define.action_base import *
         "input": "click",
         "point": (880, 450),
     },
-    step_sleep(3),
+    step_sleep(5),
     {
         "step": "走到鱼塘边",
         "type": "key",
         "input": "W",
-        "delay": 1600,
+        "delay": 2500,
     },
     step_sleep(4),
 )

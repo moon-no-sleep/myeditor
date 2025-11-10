@@ -1,6 +1,7 @@
 from Model.code_all import g_default_codeList
 from config.config import read_mode, set_mode
 from config import config
+from generator._info import write_info
 
 
 def main(a=True):
@@ -22,9 +23,10 @@ def code_list():
 
 
 if __name__ == "__main__":
+    # write_info()
     # 请先设置有摇杆或无摇杆模式
     # main(True)
-    # main(False)
-    code_list()
+    main(False)
+    # code_list()
 
     print("结束")
