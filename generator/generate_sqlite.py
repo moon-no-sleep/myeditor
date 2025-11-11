@@ -30,7 +30,13 @@ from action_define.action_restaurant import (
     非月卡餐厅_前台SW,
 )
 from action_define.action_red_fox import 小红狐全部, 小红狐菜地, 小红狐牧场, 小红狐鱼塘
-from action_define.action_magic_farm import 奇迹农场_无人机, 奇迹农场_手动
+from action_define.action_magic_farm import (
+    奇迹农场_无人机,
+    奇迹农场_手动,
+    收菜_手工,
+    收菜_无人机,
+    奇迹农场_卖菜,
+)
 
 
 def write_script(i, actions_tree):
@@ -87,6 +93,9 @@ def main_script(x="all"):
         "输入好友名称2": 输入好友名称2,
         "奇迹农场_无人机": 奇迹农场_无人机,
         "奇迹农场_手动": 奇迹农场_手动,
+        "收菜_无人机": 收菜_无人机,
+        "奇迹农场_卖菜": 奇迹农场_卖菜,
+        "收菜_手工": 收菜_手工,
     }
 
     if x == "all":

@@ -281,6 +281,8 @@ from action_define.action_base import *
         "delay": 1500,
     },
     大功能键,
+    step_sleep(1),
+    确认解锁,
     step_sleep(12),
     {
         "step": "往南走",

@@ -21,6 +21,10 @@ from action_define.action_base import *
     },
     step_sleep(1),
     大功能键,
+    step_sleep(1),
+    确认解锁,
+    step_sleep(1),
+    大功能键,
     step_sleep(15),
 ]
 
@@ -31,18 +35,20 @@ from action_define.action_base import *
     {
         "step": "无人机1",
         "type": "key",
-        "input": "A",
-        "delay": 1200,
+        "input": "W",
+        "delay": 200,
     },
     step_sleep(1),
     {
         "step": "无人机2",
         "type": "key",
-        "input": "W",
-        "delay": 200,
+        "input": "A",
+        "delay": 1200,
     },
     step_sleep(1),
     Q键位置,
+    step_sleep(1),
+    确认解锁,
     step_sleep(1),
 ]
 收菜_手工 = [
@@ -62,19 +68,27 @@ from action_define.action_base import *
         "delay": 1200,
     },
     step_sleep(1),
-    {
-        "step": "Q键位置",
-        "type": "key",
-        "input": "Q",
-        "delay": 60000,
-    },
+    *[
+        {
+            "step": "Q键位置",
+            "type": "key",
+            "input": "Q",
+            "delay": 5000,
+        }
+        * 12
+    ],
     step_sleep(1),
 ]
 
 奇迹农场_卖菜 = [
     复位鼠标,
     step_sleep(1),
-    大功能键,
+    {
+        "step": "仓库",
+        "type": "mouse",
+        "input": "click",
+        "point": (956, 96),
+    },
     step_sleep(1),
     {
         "step": "果实",
