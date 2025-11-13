@@ -23,10 +23,10 @@ def code_list():
 
 
 if __name__ == "__main__":
-    write_info()
+    # write_info()
     # 请先设置有摇杆或无摇杆模式
-    main(True)
-    # main(False)
-    code_list()
+    # main(True)
+    main(False)
+    # code_list()
 
     print("结束")
